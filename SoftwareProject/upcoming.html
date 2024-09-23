@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Tasks</title>
+    <link rel="stylesheet" href="upcoming.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="user-profile" onclick="toggleDropdown()">
+                <div class="user-icon"></div>
+                <span>User</span>
+                <!-- Dropdown Navigation -->
+                <div class="dropdown-content" id="userDropdown">
+                    <a href="#">User Info</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="addtask.html" class="menu-item add-task" onclick="setActiveMenu(this)"> 
+                    <div class="icon add-task"></div>
+                    <span>Add Task</span>
+                </a>
+                <a href="search.html" class="menu-item search" onclick="setActiveMenu(this)">
+                    <div class="icon search"></div>
+                    <span>Search</span>
+                </a>
+                <a href="upcoming.html" class="menu-item upcoming" onclick="setActiveMenu(this)">
+                    <div class="icon upcoming"></div>
+                    <span>Upcoming</span>
+                </a>
+            </div>
+        </div>
+          <!-- Main Content -->
+          <div class="main-content">
+            <header class="header">
+                <h2>Upcoming Tasks</h2>
+            </header>
+            <div class="task-section">
+                <div class="task-day">
+                    <h3>This day</h3>
+                    <div class="task">
+                        <div class="task-icon"></div>
+                        <span>Project DEATHLINE on Tuesday</span>
+                    </div>
+                   
+                </div>           
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById('userDropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        // Close the dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.closest('.user-profile')) {
+                var dropdown = document.getElementById('userDropdown');
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+        
+    </script>
+
+</body>
+</html>

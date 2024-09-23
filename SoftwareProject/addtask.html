@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="addtask.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="user-profile" onclick="toggleDropdown()">
+                <div class="user-icon"></div>
+                <span>User</span>
+                <!-- Dropdown Navigation -->
+                <div class="dropdown-content" id="userDropdown">
+                    <a href="#">User Info</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="addtask.html" class="menu-item add-task" onclick="setActiveMenu(this)"> 
+                    <div class="icon add-task"></div>
+                    <span>Add Task</span>
+                </a>
+                <a href="search.html" class="menu-item search" onclick="setActiveMenu(this)">
+                    <div class="icon search"></div>
+                    <span>Search</span>
+                </a>
+                <a href="upcoming.html" class="menu-item upcoming" onclick="setActiveMenu(this)">
+                    <div class="icon upcoming"></div>
+                    <span>Upcoming</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="header">
+                <h2>Add Task</h2>
+            </header>
+            <div class="task-form-section">
+                <form>
+                    <div class="input-group">
+                        <label for="task-title">Task Title</label>
+                        <input type="text" id="task-title" placeholder="Enter task title">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" id="due-date">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" rows="4" placeholder="Enter task description"></textarea>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit">Add Task</button>
+                        <a href="todolist.html" class="cancel-button">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById('userDropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        // Close the dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.closest('.user-profile')) {
+                var dropdown = document.getElementById('userDropdown');
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 50px; /* Position it below the user profile */
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown on hover */
+.show {
+    display: block; /* Show the dropdown on hover */
+}
+/* Hover effect for the "User" text */
+
+.user-profile:hover {
+    border-radius: 4px;
+    background-color: #5d5d5d;
+    color: #b3b3b3; /* Change text color on hover */
+    
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #d8d8d8;
+    padding: 20px;
+}
+
+.user-profile {
+    padding: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.user-profile .user-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.menu-item a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the text color from the parent element */
+    font-weight: inherit; /* Inherit the font weight from the parent element */
+}
+
+
+.menu-item:hover {
+    background-color: #5d5d5d;
+    border-radius: 4px;
+    color: #ffffff; /* Change text color on hover */
+}
+
+.menu-item.active {
+    background-color: #6a6a6a;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #000; 
+}
+
+.menu-item .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.menu-item.add-task .icon {
+    background: url('add-task-icon.png') no-repeat center;
+}
+
+.menu-item.search .icon {
+    background: url('search-icon.png') no-repeat center;
+}
+
+.menu-item.upcoming .icon {
+    background: url('calendar-icon.png') no-repeat center;
+}
+
+.menu-item.active {
+    background-color: #5d5d5d;
+    border-radius: 4px;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.days {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+}
+
+.user-options .user-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-options .options-icon {
+    width: 30px;
+    height: 30px;
+    background: url('options-icon.png') no-repeat center;
+}
+
+.task-section {
+    margin-top: 20px;
+}
+
+.task-day {
+    margin-bottom: 30px;
+}
+
+.task-day h3 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #777;
+}
+
+.task .task-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+
+
+.add-task .add-icon {
+    width: 20px;
+    height: 20px;
+    background: url('add-icon.png') no-repeat center;
+    margin-right: 10px;
+}

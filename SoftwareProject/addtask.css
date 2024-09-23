@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 50px; /* Position it below the user profile */
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown on hover */
+.show {
+    display: block; /* Show the dropdown on hover */
+}
+/* Hover effect for the "User" text */
+
+.user-profile:hover {
+    border-radius: 4px;
+    background-color: #5d5d5d;
+    color: #b3b3b3; /* Change text color on hover */
+    
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #d8d8d8;
+    padding: 20px;
+}
+
+.user-profile {
+    padding: 5px;
+    max-width: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.user-profile .user-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.menu-item a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the text color from the parent element */
+    font-weight: inherit; /* Inherit the font weight from the parent element */
+}
+
+
+.menu-item:hover {
+    background-color: #5d5d5d;
+    border-radius: 4px;
+    color: #ffffff; /* Change text color on hover */
+}
+
+.menu-item.active {
+    background-color: #6a6a6a;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #000; 
+}
+
+.menu-item .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.menu-item.add-task .icon {
+    background: url('add-task-icon.png') no-repeat center;
+}
+
+.menu-item.search .icon {
+    background: url('search-icon.png') no-repeat center;
+}
+
+.menu-item.upcoming .icon {
+    background: url('calendar-icon.png') no-repeat center;
+}
+
+.menu-item.active {
+    background-color: #5d5d5d;
+    border-radius: 4px;
+}
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.task-form-section {
+    margin-top: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3c3c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4f4f4f;
+}
+
+.cancel-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3c3c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.cancel-button:hover {
+    background-color: #4f4f4f;
+}
